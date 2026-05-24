@@ -1,0 +1,11 @@
+TABLE orders
+PRIMARY_KEY o_orderkey
+FIELD o_orderkey INT
+FIELD o_custkey INT
+FIELD o_orderstatus CHAR 1
+FIELD o_totalprice VARCHAR 20
+FIELD o_orderdate CHAR 10
+FIELD o_orderpriority VARCHAR 15
+FIELD o_clerk VARCHAR 15
+FIELD o_shippriority INT
+FIELD o_comment VARCHAR 79

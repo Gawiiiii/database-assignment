@@ -1,0 +1,19 @@
+# Build outputs
+build/
+cmake-build-*/
+**/build/
+
+# OS/editor files
+.DS_Store
+*.swp
+*.swo
+
+# Large generated TPC-H data. A small sample is intentionally kept at:
+# assignment2-db-storage-project/data/orders.tbl
+*.tbl
+!assignment2-db-storage-project/data/orders.tbl
+
+# Runtime dumps
+*.dat
+*.log
+__pycache__/
