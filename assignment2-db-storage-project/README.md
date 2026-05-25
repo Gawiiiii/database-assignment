@@ -65,6 +65,33 @@ python3 ../scripts/plot_metrics.py ../results/benchmark_result.csv ../results/fi
 - `io_throughput.png`
 - `query_latency.png`
 
+## 单条主键查询接口
+
+程序提供 `--query-key` 作为外部查询接口。它会先按指定 schema 和 dataset 构建内存存储引擎与主键 B+ 树，然后输出主键对应记录；未找到时输出 `NOT_FOUND`。
+
+查询 synthetic Student 数据：
+
+```bash
+./db_storage_bench \
+  --schema ../schema/student.schema.txt \
+  --dataset synthetic \
+  --limit 1000 \
+  --query-key 0000000005
+```
+
+查询 TPC-H orders 小样本：
+
+```bash
+./db_storage_bench \
+  --schema ../schema/orders.schema.txt \
+  --dataset tpch \
+  --tpch-dir ../data \
+  --limit 1000 \
+  --query-key 1
+```
+
+输出格式为 `field=value`，字段之间使用 `|` 分隔，便于脚本检查。
+
 ## 一键运行
 
 在项目根目录外也可以执行：
