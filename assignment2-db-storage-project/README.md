@@ -1,6 +1,6 @@
 # DB Storage Project
 
-这是一个 C++17 简化数据库记录存储引擎原型，支持 schema.txt 读取、变长记录、4KB Page、SlotDirectory、插入、删除、更新、RID 读取、B+树主键查询、TPC-H orders.tbl 加载、benchmark CSV 输出和报告图表生成。
+这是一个 C++17 简化数据库记录存储引擎原型，支持 schema.txt 读取、变长记录、4KB Page、SlotDirectory、插入、删除、更新、RID 读取、B+树主键查询、TPC-H orders.tbl 加载、benchmark CSV 输出和图表生成。
 
 ## 编译
 
@@ -64,14 +64,6 @@ python3 ../scripts/plot_metrics.py ../results/benchmark_result.csv ../results/fi
 - `query_qps.png`
 - `io_throughput.png`
 - `query_latency.png`
-
-## 生成报告
-
-```bash
-python3 ../scripts/generate_report.py
-```
-
-报告写入 `report/report.md`，性能表格会从 `results/benchmark_result.csv` 自动汇总。
 
 ## 一键运行
 

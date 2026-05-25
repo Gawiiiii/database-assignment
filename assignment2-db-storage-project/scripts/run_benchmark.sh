@@ -31,4 +31,3 @@ fi
 python3 "${PROJECT_DIR}/scripts/plot_metrics.py" \
   "${PROJECT_DIR}/results/benchmark_result.csv" \
   "${PROJECT_DIR}/results/figures"
-python3 "${PROJECT_DIR}/scripts/generate_report.py"
